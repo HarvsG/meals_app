@@ -75,7 +75,7 @@ var DUMMY_MEALS = [
       '1 Onion',
       '250g Spaghetti',
       'Spices',
-      'Cheese (optional)'
+      'Cheese (optionaAffordabilityl)'
     ],
     steps: [
       'Cut the tomatoes and the onion into small pieces.',
