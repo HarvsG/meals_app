@@ -3,15 +3,16 @@ import './category_meals_screen.dart';
 //import 'package:meals_app/models/category.dart';
 
 class CategoryItem extends StatelessWidget {
+  final String id;
   final String title;
   final Color color;
 
-  const CategoryItem({this.title, this.color});
+  const CategoryItem({@required this.title, @required this.color, @required this.id});
 
   void _selectCategory(BuildContext ctx) {
     Navigator.of(ctx).push(MaterialPageRoute(
         builder: (_) {
-          return CategoryMealsScreen();
+          return CategoryMealsScreen(categoryId: id,categoryTitle: title,);
         },
         fullscreenDialog: false));
   }
