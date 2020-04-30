@@ -4,14 +4,23 @@ import './categories_screen.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'DeliMeals',
       theme: ThemeData(
-
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.purple,
+        accentColor: Colors.amber,
+        canvasColor: Color.fromRGBO(254, 255, 229, 1),
+        fontFamily: 'Raleway',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              body1: TextStyle(color: Color.fromRGBO(20, 50, 50, 1)),
+              body2: TextStyle(color: Color.fromRGBO(20, 50, 50, 1)),
+              title: TextStyle(
+                fontSize: 24,
+                fontFamily: 'RobotoCondensed',
+              ),
+            ),
       ),
       home: CategoriesScreen(),
     );
@@ -24,18 +33,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       appBar: AppBar(
-
         title: Text('DeliMeals'),
       ),
-      body: Center(
-        child: Text('Navigation time')
-      ), 
+      body: Center(child: Text('Navigation time')),
     );
   }
 }
