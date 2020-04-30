@@ -3,8 +3,12 @@ import '../models/meal.dart';
 import '../dummy_data.dart';
 
 class MealDetailScreen extends StatelessWidget {
+  final Function toggleFavourites;
+  final Function isFavourite;
   //const MealDetailScreen({Key key}) : super(key: key);
   static const routeName = '/media-detail';
+
+  const MealDetailScreen({this.toggleFavourites, this.isFavourite});
 
   Widget buildSectionTitile(BuildContext context, String text) {
     return Container(
@@ -60,22 +64,29 @@ class MealDetailScreen extends StatelessWidget {
             ),
             buildSectionTitile(context, 'Steps'),
             buildContainer(
-                child: ListView.builder(
-              itemBuilder: (context, index) => Column(
-                children: <Widget>[
-                  ListTile(
-                    leading: CircleAvatar(
-                      child: Text('# ${index + 1}'),
+              child: ListView.builder(
+                itemBuilder: (context, index) => Column(
+                  children: <Widget>[
+                    ListTile(
+                      leading: CircleAvatar(
+                        child: Text('# ${index + 1}'),
+                      ),
+                      title: Text(_selectedMeal.steps[index]),
                     ),
-                    title: Text(_selectedMeal.steps[index]),
-                  ),
-                  Divider(),
-                ],
+                    Divider(),
+                  ],
+                ),
+                itemCount: _selectedMeal.steps.length,
               ),
-              itemCount: _selectedMeal.steps.length,
-            ))
+            )
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: isFavourite(_mealId)
+            ? Icon(Icons.favorite)
+            : Icon(Icons.favorite_border),
+        onPressed: () => toggleFavourites(_mealId),
       ),
     );
   }
