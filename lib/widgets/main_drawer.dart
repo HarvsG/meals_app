@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screens/filters.dart';
+import '../screens/filters_screen.dart';
 import '../screens/tabs_screen.dart';
 
 class MainDrawer extends StatelessWidget {
@@ -50,7 +50,7 @@ class MainDrawer extends StatelessWidget {
             title: 'Filters',
             icon: Icons.settings,
             tapHandler: () {
-              Navigator.of(context).pushNamed(FilterScreen.routeName);
+              Navigator.of(context).pushNamed(FiltersScreen.routeName);
             },
           ),
         ],

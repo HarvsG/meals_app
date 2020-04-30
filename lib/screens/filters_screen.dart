@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FilterScreen extends StatelessWidget {
-  //const FilterScreen({Key key}) : super(key: key);
+class FiltersScreen extends StatelessWidget {
+  //const FiltersScreen({Key key}) : super(key: key);
   static const routeName= '/filters';
 
   @override
