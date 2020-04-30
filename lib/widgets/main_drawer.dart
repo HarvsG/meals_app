@@ -43,14 +43,14 @@ class MainDrawer extends StatelessWidget {
             title: 'Meals',
             icon: Icons.restaurant,
             tapHandler: () {
-              Navigator.of(context).pushNamed(TabsScreen.routeName);
+              Navigator.of(context).pushReplacementNamed(TabsScreen.routeName);
             },
           ),
           _buildListTile(
             title: 'Filters',
             icon: Icons.settings,
             tapHandler: () {
-              Navigator.of(context).pushNamed(FiltersScreen.routeName);
+              Navigator.of(context).pushReplacementNamed(FiltersScreen.routeName);
             },
           ),
         ],
