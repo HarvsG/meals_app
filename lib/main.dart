@@ -14,11 +14,12 @@ class MyApp extends StatelessWidget {
         canvasColor: Color.fromRGBO(254, 255, 229, 1),
         fontFamily: 'Raleway',
         textTheme: ThemeData.light().textTheme.copyWith(
-              body1: TextStyle(color: Color.fromRGBO(20, 50, 50, 1)),
-              body2: TextStyle(color: Color.fromRGBO(20, 50, 50, 1)),
+              body1: const TextStyle(color: Color.fromRGBO(20, 50, 50, 1)),
+              body2: const TextStyle(color: Color.fromRGBO(20, 50, 50, 1)),
               title: TextStyle(
-                fontSize: 24,
+                fontSize: 20,
                 fontFamily: 'RobotoCondensed',
+                fontWeight: FontWeight.bold,
               ),
             ),
       ),
